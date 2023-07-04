@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeliServe Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>DeliServe Menu</h1>
+    
+    <form action="/add_dish" method="POST">
+        <input type="text" name="dish_id" placeholder="Dish ID" required>
+        <input type="text" name="dish_name" placeholder="Dish Name" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <select name="availability" required>
+            <option value="yes">Available</option>
+            <option value="no">Not Available</option>
+        </select>
+        <button type="submit">Add Dish</button>
+    </form>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Dish ID</th>
+                <th>Dish Name</th>
+                <th>Price</th>
+                <th>Availability</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dish in dishes %}
+            <tr>
+                <td>{{ dish.dish_id }}</td>
+                <td>{{ dish.dish_name }}</td>
+                <td>{{ dish.price }}</td>
+                <td>{{ dish.availability }}</td>
+                <td>
+                    <button onclick="updateAvailability('{{ dish.dish_id }}')">Update</button>
+                    <button onclick="deleteDish('{{ dish.dish_id }}')">Delete</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        let baseURL = "http://127.0.0.1:5000"
+        function updateAvailability(dishId) {
+            window.location.href = `/update_availability/${dishId}`
+        }
+
+        function deleteDish(dishId) {
+            window.location.href = `/delete-dish/${dishId}`
+        }
+    </script>
+</body>
+</html>

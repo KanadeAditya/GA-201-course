@@ -1,0 +1,90 @@
+[
+    {
+        "_id": {
+            "$oid": "64a5b47ee3e3e45a87afaf3f"
+        },
+        "availability": "YES",
+        "dish_id": 1,
+        "dish_image": "https://images.pexels.com/photos/11111603/pexels-photo-11111603.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "Pizza",
+        "price": "300.00",
+        "stock": 1
+    },
+    {
+        "_id": {
+            "$oid": "64a5be90ac3d75d907a14b6d"
+        },
+        "availability": "YES",
+        "dish_id": 4,
+        "dish_image": "https://images.pexels.com/photos/10831651/pexels-photo-10831651.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "Borgir",
+        "price": "40.00",
+        "stock": 0
+    },
+    {
+        "_id": {
+            "$oid": "64a5bcd8ac3d75d907a14b69"
+        },
+        "availability": "YES",
+        "dish_id": 2,
+        "dish_image": "https://images.pexels.com/photos/14775030/pexels-photo-14775030.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "dish_name": "Cake",
+        "price": "400.00",
+        "stock": 3
+    },
+    {
+        "_id": {
+            "$oid": "64a5bec4ac3d75d907a14b6e"
+        },
+        "availability": "YES",
+        "dish_id": 6,
+        "dish_image": "https://images.pexels.com/photos/7736775/pexels-photo-7736775.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "SandWich",
+        "price": "80.00",
+        "stock": 5
+    },
+    {
+        "_id": {
+            "$oid": "64a64ec6149191a57b29d4d8"
+        },
+        "availability": "YES",
+        "dish_id": 10,
+        "dish_image": "https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "pasta",
+        "price": "100.00",
+        "stock": "10"
+    },
+    {
+        "_id": {
+            "$oid": "64a64f4a149191a57b29d4da"
+        },
+        "availability": "YES",
+        "dish_id": 15,
+        "dish_image": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "chocolate Cake",
+        "price": "600.00",
+        "stock": "19"
+    },
+    {
+        "_id": {
+            "$oid": "64a64e99149191a57b29d4d7"
+        },
+        "availability": "YES",
+        "dish_id": 7,
+        "dish_image": "https://images.pexels.com/photos/13072972/pexels-photo-13072972.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "Momo",
+        "price": "60.00",
+        "stock": "5"
+    },
+    {
+        "_id": {
+            "$oid": "64a64eee149191a57b29d4d9"
+        },
+        "availability": "YES",
+        "dish_id": 14,
+        "dish_image": "https://images.pexels.com/photos/2116090/pexels-photo-2116090.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "dish_name": "Salad",
+        "price": "200.00",
+        "stock": "4"
+    }
+]

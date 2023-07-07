@@ -1,0 +1,106 @@
+Problem 1 (MongoDB):
+db.createCollection("Customers")
+
+Problem 1 (SQL):
+CREATE TABLE Customers (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    address VARCHAR(255),
+    phone_number VARCHAR(255)
+)
+
+Problem 2 (MongoDB):
+db.Customers.insertMany([
+    { id: 1, name: "John Doe", email: "john@example.com", address: "123 Street", phone_number: "1234567890" },
+    { id: 2, name: "Jane Smith", email: "jane@example.com", address: "456 Avenue", phone_number: "9876543210" },
+    { id: 3, name: "Michael Johnson", email: "michael@example.com", address: "789 Road", phone_number: "5555555555" },
+    { id: 4, name: "Emily Davis", email: "emily@example.com", address: "321 Boulevard", phone_number: "1112223333" },
+    { id: 5, name: "David Wilson", email: "david@example.com", address: "654 Lane", phone_number: "4444444444" }
+])
+
+Problem 2 (SQL):
+INSERT INTO Customers (id, name, email, address, phone_number) VALUES
+    (1, 'John Doe', 'john@example.com', '123 Street', '1234567890'),
+    (2, 'Jane Smith', 'jane@example.com', '456 Avenue', '9876543210'),
+    (3, 'Michael Johnson', 'michael@example.com', '789 Road', '5555555555'),
+    (4, 'Emily Davis', 'emily@example.com', '321 Boulevard', '1112223333'),
+    (5, 'David Wilson', 'david@example.com', '654 Lane', '4444444444')
+
+Problem 3 (MongoDB):
+db.Customers.find()
+
+Problem 3 (SQL):
+SELECT * FROM Customers
+
+Problem 4 (MongoDB):
+db.Customers.find({}, { name: 1, email: 1 })
+
+Problem 4 (SQL):
+SELECT name, email FROM Customers
+
+Problem 5 (MongoDB):
+db.Customers.findOne({ id: 3 })
+
+Problem 5 (SQL):
+SELECT * FROM Customers WHERE id = 3
+
+Problem 6 (MongoDB):
+db.Customers.find({ name: /^A/ })
+
+Problem 6 (SQL):
+SELECT * FROM Customers WHERE name LIKE 'A%'
+
+Problem 7 (MongoDB):
+db.Customers.find().sort({ name: -1 })
+
+Problem 7 (SQL):
+SELECT * FROM Customers ORDER BY name DESC
+
+Problem 8 (MongoDB):
+db.Customers.updateOne({ id: 4 }, { $set: { address: "New Address" } })
+
+Problem 8 (SQL):
+UPDATE Customers SET address = 'New Address' WHERE id = 4
+
+Problem 9 (MongoDB):
+db.Customers.find().sort({ id: 1 }).limit(3)
+
+Problem 9 (SQL):
+SELECT * FROM Customers ORDER BY id ASC LIMIT 3
+
+Problem 10 (MongoDB):
+db.Customers.deleteOne({ id: 2 })
+
+Problem 10 (SQL):
+DELETE FROM Customers WHERE id = 2
+
+Problem 11 (MongoDB):
+db.Customers.countDocuments()
+
+Problem 11 (SQL):
+SELECT COUNT(*) FROM Customers
+
+Problem 12 (MongoDB):
+db.Customers.find().sort({ id: 1 }).skip(2)
+
+Problem 12 (SQL):
+SELECT * FROM Customers ORDER BY id ASCLIMIT 2, 18446744073709551615
+
+Problem 13 (MongoDB):
+db.Customers.find({ id: { $gt: 2 }, name: /^B/ })
+
+Problem 13 (SQL):
+SELECT * FROM Customers WHERE id > 2 AND name LIKE 'B%'
+
+Problem 14 (MongoDB):
+db.Customers.find({ $or: [{ id: { $lt: 3 } }, { name: /s$/ }] })
+
+Problem 14 (SQL):
+SELECT * FROM Customers WHERE id < 3 OR name LIKE '%s'
+
+Problem 15 (MongoDB):
+db.Customers.find({ $or: [{ phone_number: { $exists: false } }, { phone_number: null }] })
+
+Problem 15 (SQL):
+SELECT * FROM Customers WHERE phone_number IS NULL

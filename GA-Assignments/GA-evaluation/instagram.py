@@ -13,6 +13,7 @@ def hello_world():
 def post():
     return jsonify(db)
 
+
 @app.route("/post/<post_id>",methods = ["GET"])
 def getpost(post_id):
     for items in db:

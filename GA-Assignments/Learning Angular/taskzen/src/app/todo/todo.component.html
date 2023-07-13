@@ -1,0 +1,24 @@
+<div>
+    <h2>ToDo List</h2>
+
+    <div class="allforms">
+        <form (submit)="addTask()">
+            <input type="text" placeholder="Enter task" [(ngModel)]="newTask" name="taskInput">
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <ul>
+        <li *ngFor="let task of tasks; let index = index">
+          <h3 [class.completed]="task.completed" (click)="toggleEditMode(index)">{{ task.title }}</h3>
+          <div>
+            <button (click)="completeTask(task)">Complete</button>
+          <button (click)="deleteTask(task)">Delete</button>
+          <form *ngIf="editMode === index" (submit)="saveTask(index)">
+            <input type="text" [(ngModel)]="tasks[index].title" name="editedTask">
+            <button type="submit">Edit</button>
+          </form>
+          </div>
+        </li>
+      </ul>
+</div>
